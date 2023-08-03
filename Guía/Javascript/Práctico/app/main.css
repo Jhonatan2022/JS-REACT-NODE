@@ -65,6 +65,7 @@ nav {
   margin-right: 12px;
 }
 .navbar-shopping-cart {
+  cursor: pointer;
   position: relative;
 }
 .navbar-shopping-cart div {
