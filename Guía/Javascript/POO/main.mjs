@@ -1,9 +1,11 @@
 function playVideo(id) {
     const urlSecreta = "https://platziultrasecretomasquelanasa.com/" + id;
+    console.log("Se está reproduciendo desde la url " + urlSecreta);
 }
 
 function stopVdeo (id){
     const urlSecreta = "https://platziultrasecretomasquelanasa.com/" + id;
+    console.log("Pausamos la url " + urlSecreta);
 }
 
 
