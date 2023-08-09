@@ -198,6 +198,8 @@ class TeacherStudent extends Student {
   }
 }
 
+
+//------------------------------
 const juan = new FreeStudent({
   name: "JuanDC",
   username: "juandc",
