@@ -1,0 +1,25 @@
+{
+  "name": "cc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jhonatan2022/JS-REACT-NODE.git"
+  },
+  "keywords": [
+    "Node",
+    "Ecmascript",
+    "Javascript",
+    "Modules"
+  ],
+  "author": "Jhonattan Florez <florezj328@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jhonatan2022/JS-REACT-NODE/issues"
+  },
+  "homepage": "https://github.com/Jhonatan2022/JS-REACT-NODE#readme"
+}
