@@ -21,5 +21,7 @@
   "bugs": {
     "url": "https://github.com/Jhonatan2022/JS-REACT-NODE/issues"
   },
-  "homepage": "https://github.com/Jhonatan2022/JS-REACT-NODE#readme"
+  "homepage": "https://github.com/Jhonatan2022/JS-REACT-NODE#readme",
+  "type": "module",
+  "Comment": "Ponemos type module para que node entienda que vamos a usar modulos de ES6"
 }
