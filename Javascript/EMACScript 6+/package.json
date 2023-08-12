@@ -23,5 +23,8 @@
   },
   "homepage": "https://github.com/Jhonatan2022/JS-REACT-NODE#readme",
   "type": "module",
-  "Comment": "Ponemos type module para que node entienda que vamos a usar modulos de ES6"
+  "Comment": "Ponemos type module para que node entienda que vamos a usar modulos de ES6",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
 }
