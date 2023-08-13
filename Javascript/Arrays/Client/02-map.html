@@ -21,9 +21,10 @@
 
       const app = document.querySelector("#app");
 
-      products.forEach(product => {
-        app.innerHTML += `<li>${product.name} - ${product.price} - ${product?.description}</li>`;
+      const list = products.map(product => {
+        return `<li>${product.name} - ${product.price} - ${product?.description}</li>`;
       });
+      app.innerHTML = list.join("");
     </script>
   </body>
 </html>
