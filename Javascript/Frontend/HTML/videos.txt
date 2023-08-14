@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section>
+            <video src="ccccccc#t=20,60" controls preload="auto">
+                <!--El t da los valores iniciales y finales del video en segundos -->
+                <source src="link.mp4">
+                <source src="link.m4v">
+            </video>
+        </section>
+    </main>
+</body>
+</html>
