@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Pagina Sencilla" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index,follow" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <!--Sección superior de nuestro website-->
+
+      <nav></nav>
+      <!--Sección de navegación de nuestro website, siempre dentro del header-->
+    </header>
+
+    <main>
+      <!--Main es el contenido central de nuestro website, "la parte del medio"-->
+
+      <section>
+        <!--Nuestro website puede estar divido por secciones, por ejemplo platzi tiene 3: El navegador de cursos y rutas, el feed y nuestras rutas de aprendizaje-->
+
+        <article>
+          <!--Contenido independiente de la página. Es reutilizable-->
+        </article>
+      </section>
+
+      <ul>
+        <!--Lista desordenada: Sin numerar-->
+        <!--Item List. Elementos de la lista-->
+        <li>Firs</li>
+            <ol>
+                <li><a href="#">Hello</a></li>
+                <li>Second</li>
+                <li>Third</li>
+            </ol>
+        <li>Second</li>
+        <ol>
+            <li>First</li>
+            <li>Second</li>
+            <li>Third</li>  
+        </ol>
+    </ul>
+
+      <ol></ol>
+      <!--Lista ordenada: Numerada-->
+    </main>
+
+    <footer><!--Sección final de nuestro website--></footer>
+
+    <p>Soy un texto</p>
+    <!--Párrafo, texto-->
+
+    <h1>Soy un titulo</h1>
+    <!--Títulos, muestran el texto más grande y con negrilla. Existen desde el h1 al h6-->
+
+    <a href="#">Soy un link<!--Enlaces/links que nos permitirán movernos entre páginas.--></a>
+    
+
+    <!--Imagenes-->
+    <figure>
+      <img src="" alt="Description">
+      <figcaption>Descripción de la imagen</figcaption>
+    </figure>
+  </body>
+</html>
