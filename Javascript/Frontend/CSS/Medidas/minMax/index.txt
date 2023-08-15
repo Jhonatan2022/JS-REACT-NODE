@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error ab nisi natus enim earum dolorem fuga nulla culpa qui, aspernatur amet, quae quam laboriosam alias, illum praesentium! Nam, nisi in!
+        Quisquam, consequuntur eligendi? Vero reiciendis porro ab odio perspiciatis animi maiores illum, vitae hic est, culpa assumenda harum molestias beatae cumque sed deserunt suscipit fugit. Debitis alias omnis fugiat ab.
+        Eligendi odit eos id deserunt, nulla, tempore asperiores est, cum iusto animi similique optio. Itaque totam molestiae maxime porro quo quidem soluta hic eligendi adipisci rerum, neque a, temporibus blanditiis!</p>
+      </section>
+    </main>
+  </body>
+</html>
