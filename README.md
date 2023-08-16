@@ -6,4 +6,4 @@
 [![](Document/img/PageAPI.png)](https://jhonatan2022.github.io/JS-REACT-NODE/Javascript/Asincronismo/app/)
 
 
-[![](Document/img/Clon%20Google.png)](https://jhonatan2022.github.io/JS-REACT-NODE/Frontend/practico/)
+[![](Document/img/Clon%20Google.png)](https://jhonatan2022.github.io/JS-REACT-NODE/Frontend/Practico/)
