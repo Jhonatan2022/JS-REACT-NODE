@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="Workshop 2 del curso Manipulación del DOM de Platzi en donde se crea un vanilla JavaScript plugin para hacer lazy load de imagenes" />
+  <link rel="stylesheet" type="text/css" href="%PUBLIC_URL%/_dist_/index.css" />
+  <title>Lazy Loading</title>
+</head>
+<body>
+  <div class="pt-10 pb-4 px-4 sm:px-6 lg:px-8">
+    <div class="text-center">
+      <p class="text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase">
+        Manipulación DOM
+      </p>
+      <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
+        Lazy loading
+      </h3>
+      <div class="max-w-xl mx-auto text-xl text-gray-500 leading-7">
+        <p class="mt-4">
+          Plugin en vanilla JavaScript para cargar imágenes con lazy load.✨✨
+        </p>
+        <p class="mt-4">
+          Las imágenes agregadas no se descargarán hasta que sean visibles en
+          la pantalla
+        </p>
+      </div>
+    </div>
+  </div>
+  <fieldset class="text-center">
+    <p class="p-3">
+      <legend class="mx-auto text-sm text-gray-500">
+        Agrega una nueva imagen al final de la lista
+      </legend>
+    </p>
+    <button type="submit"
+      class="py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+      Agregar Imagen
+    </button>
+    <p class="mt-4">
+      <button type="reset" class="font-medium text-indigo-600 hover:text-indigo-500">
+        Limpiar
+      </button>
+    </p>
+  </fieldset>
+  <div class="mt-4" id="images"></div>
+  <footer class="text-center mt-48 p-6 text-sm text-gray-500">
+    <p>
+      Powered by
+      <a href="https://randomfox.ca" target="_blank">https://randomfox.ca</a>
+      | Made by <a href="https://github.com/jhonatan2022">@jhonatan2022</a>
+    </p>
+  </footer>
+
+  <!-- Add more scripts here -->
+  <script type="module" src="%PUBLIC_URL%/_dist_/index.js"></script>
+</body>
+</html>
