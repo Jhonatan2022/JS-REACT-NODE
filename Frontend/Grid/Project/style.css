@@ -1,0 +1,116 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* First section - Hero */
+
+.hero {
+  display: grid;
+  grid-template-columns: 2fr minmax(100px, 3fr);
+  border-bottom: 1px solid #ddd;
+}
+
+.hero-image {
+  margin: 0;
+}
+
+.hero-image img{
+  width: 100%;
+  object-fit: contain;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.info-title {
+  color: #333;
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 24px;
+}
+
+.info-subtitle {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+}
+
+.info-button {
+  border: none;
+  border-radius: 20px;
+  color: #333;
+  background-color: #fb8c00;
+  font-weight: 900;
+  padding: 12px 24px;
+}
+
+/* Second section - services */
+
+.services-title {
+  color: #333;
+  font-size: 3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 100px 0 50px 0;
+}
+
+.dishes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-template-rows: repeat(2, minmax(150px, 1fr));
+  grid-gap: 50px;
+}
+
+.dishes-image {
+  margin: 0;
+}
+
+.dishes-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dishes-image__big {
+  grid-area: 1 / 1 / 3 / 3;
+}
+
+/* Third section - menu */
+
+.menu-title {
+  color: #333;
+  font-size: 3rem;
+  font-weight: 400;
+  text-align: center;
+  margin: 100px 0 50px 0;
+}
+
+.plates {
+  display: grid;
+  grid-gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-bottom: 100px;
+}
+
+.plates-image {
+  margin: 0;
+  background-color: #ffebee;
+  padding: 20px;
+  border-top-left-radius: 30px;
+}
+
+.plates-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
