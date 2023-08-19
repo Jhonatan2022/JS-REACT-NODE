@@ -98,7 +98,7 @@ main {
 .plates {
   display: grid;
   grid-gap: 25px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   margin-bottom: 100px;
 }
 
@@ -113,4 +113,35 @@ main {
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+/* Media queries */
+@media screen and (max-width: 1024px) {
+  .info-title {
+    font-size: 2.5rem;
+  }
+  .services-title, .menu-title {
+    font-size: 2rem;
+  }
+
+  .plates {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding-bottom: 50px;
+  }
+
+  .hero-image{
+    display: none;
+  }
+
+  .dishes {
+    grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+    grid-template-rows: repeat(2, minmax(135px, 1fr));
+    grid-gap: 25px;
+  }
 }
