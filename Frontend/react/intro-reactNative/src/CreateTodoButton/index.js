@@ -1,16 +1,14 @@
-import { FaCirclePlus } from "react-icons/fa6";
-
-import './CreateTodoButton.css'
-
-function CreateTodoButton() {
+import "./CreateTodoButton.css";
+function CreateTodoButton({ setOpenModal }) {
   return (
-    <button className="CreateTodoButton" 
-    onClick={
-      () => alert('Click')
-    }>
-      <FaCirclePlus />
+    <button
+      className="CreateTodoButton"
+      onClick={() => {
+        setOpenModal((state) => !state);
+      }}
+    >
+      +
     </button>
   );
 }
-
 export { CreateTodoButton };
