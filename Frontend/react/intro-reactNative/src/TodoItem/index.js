@@ -6,7 +6,7 @@ function TodoItem(props) {
     <li className="TodoItem">
         <FaCheck 
         className={`Icon Icon-check ${props.completed && "Icon-check--active"}`}
-        onClick={props.onCompleted}/>
+        onClick={props.onComplete}/>
 
       <p className={`TodoItem-p ${props.completed && "TodoItem-p--complete"}`}>
         {props.text}
