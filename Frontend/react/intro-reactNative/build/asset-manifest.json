@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.fd54753a.css",
-    "main.js": "/static/js/main.cb5a6dd2.js",
-    "index.html": "/index.html",
-    "main.fd54753a.css.map": "/static/css/main.fd54753a.css.map",
-    "main.cb5a6dd2.js.map": "/static/js/main.cb5a6dd2.js.map"
+    "main.css": "/Users/JHONATAN%20FLOREZ/Downloads/JS-REACT-NODE/Frontend/React/intro-reactNative/build/static/css/main.fd54753a.css",
+    "main.js": "/Users/JHONATAN%20FLOREZ/Downloads/JS-REACT-NODE/Frontend/React/intro-reactNative/build/static/js/main.cb5a6dd2.js",
+    "index.html": "/Users/JHONATAN%20FLOREZ/Downloads/JS-REACT-NODE/Frontend/React/intro-reactNative/build/index.html",
+    "main.fd54753a.css.map": "/Users/JHONATAN%20FLOREZ/Downloads/JS-REACT-NODE/Frontend/React/intro-reactNative/build/static/css/main.fd54753a.css.map",
+    "main.cb5a6dd2.js.map": "/Users/JHONATAN%20FLOREZ/Downloads/JS-REACT-NODE/Frontend/React/intro-reactNative/build/static/js/main.cb5a6dd2.js.map"
   },
   "entrypoints": [
     "static/css/main.fd54753a.css",
