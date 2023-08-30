@@ -2,7 +2,7 @@ import React from "react";
 
 const SECURITY_CODE = "1234";
 
-function UseState({ name }) {
+function UseReducer({ name }) {
     const initialState = {
         value: "",
         error: false,
@@ -39,7 +39,7 @@ function UseState({ name }) {
                     placeholder="Código de seguridad"
                     value={state.value}
                     onChange={(event) => {
-                        dispatch( {type:"WRITE"});
+                        dispatch( {type:"WRITE", payload: event.target.value});
                         // onWrite(event.target.value);
                     }}
                 />
@@ -90,10 +90,10 @@ function UseState({ name }) {
     }
 }
 
-export { UseState };
+export { UseReducer };
 
 // Reducer with object literal
-const reducerOBJECT = (state) => ({
+const reducerOBJECT = (state, payload) => ({
     'CONFIRM': {
         ...state,
         error: false,
@@ -108,7 +108,7 @@ const reducerOBJECT = (state) => ({
     },
     'WRITE': { 
         ...state, 
-        value: newValue
+        value: payload,
     },
     'CHECK': { 
         ...state, 
@@ -129,7 +129,7 @@ const reducerOBJECT = (state) => ({
 
 const reducer = (state, action) => {
     if (reducerOBJECT(state)[action.type]) {
-        return reducerOBJECT(state)[action.type];
+        return reducerOBJECT(state, action.payload)[action.type];
     } else {
         return {
             ...state,
@@ -181,5 +181,3 @@ const reducer = (state, action) => {
 //       };
 //   }
 // };
-
-// 8:25
