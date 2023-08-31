@@ -14,22 +14,29 @@ import { Modal } from '../Modal';
 import { ChangeAlert } from '../ChangeAlert';
 
 function App() {
+  const { state, stateUpdaters, } = useTodos();
+
+  // Destructuring state
   const {
-    error,
     loading,
-    searchedTodos,
-    completeTodo,
-    deleteTodo,
-    openModal,
-    setOpenModal,
+    error,
     totalTodos,
+    searchedTodos,
     completedTodos,
     searchValue,
-    setSearchValue,
+    completeTodo,
+    openModal,
+  } = state;
+
+  const {
+    setOpenModal,
     addTodo,
+    deleteTodo,
+    setSearchValue,
     sincronizeTodos,
-  } = useTodos();
-  
+  } = stateUpdaters;
+
+
   return (
     <React.Fragment>
       <TodoHeader loading={loading}>
