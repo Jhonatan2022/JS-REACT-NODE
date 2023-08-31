@@ -5,6 +5,9 @@ import { Menu } from "../Menu";
 import { Footer } from "../Footer";
 import { BlogPage } from "../Blog";
 import { BlogPost } from "../Blog/BlogPost";
+import { Login } from "../Auth/Login";
+import { Logout } from "../Auth/Logout";
+import { AuthProvider, AuthRoute } from "../Auth/auth";
 import React from "react";
 import "./App.css";
 
@@ -12,18 +15,32 @@ function App() {
   return (
     <React.Fragment>
       <HashRouter>
-        <Menu />
+        <AuthProvider>
+          <Menu />
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/blog/:slug" element={<BlogPost />} />
-          {/* En caso de que no exista la ruta Imprimimos el mensaje */}
-          <Route path="*" element={<h1>Not Found</h1>} />
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Home />} />
 
-        <Footer />
+            <Route path="/blog" element={<BlogPage />} >
+              <Route path=":slug" element={<BlogPost />} />
+            </Route>
+
+            <Route path="/login" element={<Login />} />
+            <Route 
+              path="/logout" 
+              element={<AuthRoute>
+                <Logout />
+              </AuthRoute>} />
+
+            <Route path="/profile" element={
+              <AuthRoute><Profile /></AuthRoute>} />
+
+            {/* En caso de que no exista la ruta Imprimimos el mensaje */}
+            <Route path="*" element={<h1>Not Found</h1>} />
+          </Routes>
+
+          <Footer />
+        </AuthProvider>
       </HashRouter>
     </React.Fragment>
   );
