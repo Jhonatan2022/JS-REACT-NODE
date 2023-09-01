@@ -57,13 +57,13 @@ function useTodos() {
     searchedTodos,
     completedTodos,
     searchValue,
-    completeTodo,
+   
     openModal,
   };
 
   const stateUpdaters = {
     setOpenModal,
-    addTodo,
+    addTodo, completeTodo,
     deleteTodo,
     setSearchValue,
     sincronizeTodos,
