@@ -24,13 +24,13 @@ function App() {
     searchedTodos,
     completedTodos,
     searchValue,
-    completeTodo,
     openModal,
   } = state;
 
   const {
     setOpenModal,
     addTodo,
+    completeTodo,
     deleteTodo,
     setSearchValue,
     sincronizeTodos,
