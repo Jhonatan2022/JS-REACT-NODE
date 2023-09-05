@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/JS-REACT-NODE/Frontend/ReactJS/react-patrones-render/build/static/css/main.cf5833c6.css",
+    "main.js": "/JS-REACT-NODE/Frontend/ReactJS/react-patrones-render/build/static/js/main.14aaf1b8.js",
+    "index.html": "/JS-REACT-NODE/Frontend/ReactJS/react-patrones-render/build/index.html",
+    "static/media/delete.svg": "/JS-REACT-NODE/Frontend/ReactJS/react-patrones-render/build/static/media/delete.331149da222541bc87c25bf8d775a070.svg",
+    "static/media/edit.svg": "/JS-REACT-NODE/Frontend/ReactJS/react-patrones-render/build/static/media/edit.900a8fd203adc364a82d0ebc6ad8dc94.svg",
+    "static/media/check.svg": "/JS-REACT-NODE/Frontend/ReactJS/react-patrones-render/build/static/media/check.fa4fb594b16385306a04b9c87c0feb55.svg",
+    "main.cf5833c6.css.map": "/JS-REACT-NODE/Frontend/ReactJS/react-patrones-render/build/static/css/main.cf5833c6.css.map",
+    "main.14aaf1b8.js.map": "/JS-REACT-NODE/Frontend/ReactJS/react-patrones-render/build/static/js/main.14aaf1b8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cf5833c6.css",
+    "static/js/main.14aaf1b8.js"
+  ]
+}
