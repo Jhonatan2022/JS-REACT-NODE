@@ -1,5 +1,5 @@
 {
-  "name": "--",
+  "name": "react-patrones-render",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -41,5 +41,5 @@
   "devDependencies": {
     "gh-pages": "^3.2.3"
   },
-  "homepage": "https://jhonatan2022.github.io/JS-REACT-NODE/Frontend/Api-rest-JS/avanzado-api"
+  "homepage": "https://jhonatan2022.github.io/JS-REACT-NODE/Frontend/ReactJS/react-patrones-render/build"
 }
