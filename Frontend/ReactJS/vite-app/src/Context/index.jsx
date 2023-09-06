@@ -16,6 +16,11 @@ const ShoppingCardProvider = ({ children }) => {
   const openProductDetail = () => setIsProductDetailOpen(true);
   const closeProductDetail = () => setIsProductDetailOpen(false);
 
+  // Checkout Side Menu open/close
+  const [isCheckoutSideMenuOpen, setIsCheckoutSideMenuOpen] = useState(false);
+  const openCheckoutSideMenu = () => setIsCheckoutSideMenuOpen(true);
+  const closeCheckoutSideMenu = () => setIsCheckoutSideMenuOpen(false);
+
   // Show product detail
   const [productToShow, setProductToShow] = useState({});
 
@@ -28,13 +33,20 @@ const ShoppingCardProvider = ({ children }) => {
       value={{
         count,
         setCount,
+        
         isProductDetailOpen,
         openProductDetail,
         closeProductDetail,
+        
         productToShow,
         setProductToShow,
+        
         cardProducts,
         setCardProducts,
+
+        isCheckoutSideMenuOpen,
+        openCheckoutSideMenu,
+        closeCheckoutSideMenu,
       }}
     >
       {children}
