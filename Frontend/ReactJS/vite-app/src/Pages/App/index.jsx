@@ -3,6 +3,7 @@ import { ShoppingCardProvider } from "../../Context";
 import { Home } from "../Home";
 import { SignIn } from "../SignIn";
 import { Navbar } from "../../Components/Navbar";
+import { CheckoutSideMenu } from "../../Components/CheckoutSideMenu";
 import { MyOrder } from "../MyOrder";
 import { MyOrders } from "../MyOrders";
 import { MyAccount } from "../MyAccount";
@@ -27,6 +28,7 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <AppRoutes />
+        <CheckoutSideMenu />
       </BrowserRouter>
     </ShoppingCardProvider>
   );
