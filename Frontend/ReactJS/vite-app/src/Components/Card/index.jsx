@@ -84,6 +84,3 @@ function Card({ data }) {
 }
 
 export { Card };
-
-
-// 5:44
