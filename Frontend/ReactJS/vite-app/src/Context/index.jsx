@@ -32,7 +32,16 @@ const ShoppingCardProvider = ({ children }) => {
 
   // GET products from API
   const [items, setItems] = useState(null);
-
+  
+  // Search by title product
+  const [searchByTitle, setSearchByTitle] = useState(null);
+  
+  // filtered items
+  const [filteredItems, setFilteredItems] = useState(null);
+  
+  // Search by category product
+  const [searchByCategory, setSearchByCategory] = useState(null);
+  
   useEffect(() => {
     fetch("https://api.escuelajs.co/api/v1/products")
       .then((res) => res.json())
@@ -40,11 +49,46 @@ const ShoppingCardProvider = ({ children }) => {
     console.log();
   }, []);
 
-  // Search by title product
-  const [searchByTitle, setSearchByTitle] = useState(null);
+  const filterItems = (items, searchByTitle) => {
+    return items?.filter((item) => item.title.toLowerCase().includes(searchByTitle.toLowerCase()));
+  }
 
-  // filtered items
-  const [filteredItems, setFilteredItems] = useState(null);
+  useEffect(() => {
+    if (searchByTitle) {
+      setFilteredItems(filterItems(items, searchByTitle));
+    }
+  }, [searchByTitle, items])
+
+  const filteredItemsByCategory = (items, searchByCategory) => {
+    console.log(items);
+    return items?.filter(item => item.category.name.toLowerCase().includes(searchByCategory.toLowerCase()))
+    
+  }
+
+  const filterBy = (searchType, items, searchByTitle, searchByCategory) => {
+    if (searchType === 'BY_TITLE') {
+      return filterItems(items, searchByTitle)
+    }
+
+    if (searchType === 'BY_CATEGORY') {
+      return filteredItemsByCategory(items, searchByCategory)
+    }
+
+    if (searchType === 'BY_TITLE_AND_CATEGORY') {
+      return filteredItemsByCategory(items, searchByCategory).filter(item => item.title.toLowerCase().includes(searchByTitle.toLowerCase()))
+    }
+
+    if (!searchType) {
+      return items
+    }
+  }
+
+  useEffect(() => {
+    if (searchByTitle && searchByCategory) setFilteredItems(filterBy('BY_TITLE_AND_CATEGORY', items, searchByTitle, searchByCategory))
+    if (searchByTitle && !searchByCategory) setFilteredItems(filterBy('BY_TITLE', items, searchByTitle, searchByCategory))
+    if (!searchByTitle && searchByCategory) setFilteredItems(filterBy('BY_CATEGORY', items, searchByTitle, searchByCategory))
+    if (!searchByTitle && !searchByCategory) setFilteredItems(filterBy(null, items, searchByTitle, searchByCategory))
+  }, [items, searchByTitle, searchByCategory])
 
   return (
     <ShoppingCardContext.Provider
@@ -77,6 +121,9 @@ const ShoppingCardProvider = ({ children }) => {
 
         filteredItems,
         setFilteredItems,
+
+        searchByCategory,
+        setSearchByCategory,
       }}
     >
       {children}

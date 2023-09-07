@@ -18,6 +18,7 @@ function Navbar() {
           <li key={route.to}>
             <NavLink
               to={route.to}
+              onClick={() => context.setSearchByCategory(route.category)}
               className={({ isActive }) => (isActive ? activeStyle : undefined)}
             >
               {route.label}
@@ -38,7 +39,7 @@ function Navbar() {
             </NavLink>
           </li>
         ))}
-        <li className="flex items-center"><ShoppingBagIcon className='h-6 w-6 text-black cursor-pointer'/> {context.count}</li>
+        <li className="flex items-center"><ShoppingBagIcon className='h-6 w-6 text-black cursor-pointer'/> {context.cardProducts.length}</li>
       </ul>
       
     </nav>
@@ -46,12 +47,12 @@ function Navbar() {
 }
 
 const routesLeft = [];
-routesLeft.push({ to: "/", label: "All" });
-routesLeft.push({ to: "/clothes", label: "Clothes" });
-routesLeft.push({ to: "/electronics", label: "Electronics" });
-routesLeft.push({ to: "/furnitures", label: "Furnitures" });
-routesLeft.push({ to: "/toys", label: "Toys" });
-routesLeft.push({ to: "/others", label: "Others" });
+routesLeft.push({ to: "/", label: "All", category: "" });
+routesLeft.push({ to: "/clothes", label: "Clothes", category: "clothes" });
+routesLeft.push({ to: "/electronics", label: "Electronics", category: "electronics" });
+routesLeft.push({ to: "/animals", label: "Animals", category: "animals" });
+routesLeft.push({ to: "/toys", label: "Toys", category: "toys" });
+routesLeft.push({ to: "/others", label: "Others", category: "others" });
 
 const routesRight = [];
 routesRight.push({ to: "/my-orders", label: "My Orders" });
