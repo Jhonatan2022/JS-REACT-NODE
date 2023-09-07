@@ -28,7 +28,7 @@ function ProductDetail() {
       <p className="flex flex-col p-6">
         <span className="font-medium text-2xl mb-2">${price}</span>
         <span className="font-medium text-md">${title}</span>
-        <span className="font-light text-sm">${description}</span>
+        <span className="font-light text-sm">{description}</span>
       </p>
     </aside>
   );
