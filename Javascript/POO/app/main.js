@@ -1,23 +1,17 @@
 class Comment {
-  constructor({
-    content,
-    studentName,
-    studentRole = "estudiante",
-  }){
+  constructor({ content, studentName, studentRole = "estudiante" }) {
     this.content = content;
     this.studentName = studentName;
     this.studentRole = studentRole;
     this.likes = 0;
   }
 
-  publicar(){
+  publicar() {
     console.log(this.studentName + "(" + this.studentRole + ")");
     console.log(this.likes + " likes");
     console.log(this.content);
   }
 }
-
-
 
 function playVideo(id) {
   const urlSecreta = "https://platziultrasecretomasquelanasa.com/" + id;
@@ -45,12 +39,7 @@ class PlatziClass {
 }
 
 class Course {
-  constructor({ 
-    name, 
-    classes = [],
-    isFree = false,
-    lang = "spanish" 
-  }) {
+  constructor({ name, classes = [], isFree = false, lang = "spanish" }) {
     this._name = name;
     this.classes = classes;
     this.isFree = isFree;
@@ -139,37 +128,41 @@ class Student {
 }
 
 class FreeStudent extends Student {
-  constructor(props){
+  constructor(props) {
     // super(props) //Llama al constructor de la clase padre
-    super(props)
+    super(props);
   }
 
   approveCourse(newCourse) {
     if (newCourse.isFree) {
       this.approvedCourses.push(newCourse);
     } else {
-      console.warn("Lo sentimos, " + this.name + ", solo puedes tomar cursos abiertos");
+      console.warn(
+        "Lo sentimos, " + this.name + ", solo puedes tomar cursos abiertos"
+      );
     }
   }
 }
 
 class BasicStudent extends Student {
-  constructor(props){
-    super(props)
+  constructor(props) {
+    super(props);
   }
 
   approveCourse(newCourse) {
     if (newCourse.lang !== "english") {
       this.approvedCourses.push(newCourse);
     } else {
-      console.warn("Lo sentimos, " + this.name + ", no puedes tomar cursos en inglés");
+      console.warn(
+        "Lo sentimos, " + this.name + ", no puedes tomar cursos en inglés"
+      );
     }
   }
 }
 
 class ExpertStudent extends Student {
-  constructor(props){
-    super(props)
+  constructor(props) {
+    super(props);
   }
 
   approveCourse(newCourse) {
@@ -178,7 +171,7 @@ class ExpertStudent extends Student {
 }
 
 class TeacherStudent extends Student {
-  constructor(props, skills = []){
+  constructor(props, skills = []) {
     super(props);
     this.skills = skills;
     this.married = married;
@@ -198,7 +191,6 @@ class TeacherStudent extends Student {
   }
 }
 
-
 //------------------------------
 const juan = new FreeStudent({
   name: "JuanDC",
@@ -216,9 +208,12 @@ const miguelito = new BasicStudent({
   learningPaths: [escuelaWeb, escuelaData],
 });
 
-const freddy = new TeacherStudent({
-  name: "Freddy Vega",
-  email: "ss@ss!.com",
-  instagram: "freddier",
-  username: "freddier",
-}, ["React", "Redux", "MongoDB"]);
+const freddy = new TeacherStudent(
+  {
+    name: "Freddy Vega",
+    email: "ss@ss!.com",
+    instagram: "freddier",
+    username: "freddier",
+  },
+  ["React", "Redux", "MongoDB"]
+);
