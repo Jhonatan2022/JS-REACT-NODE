@@ -4,7 +4,8 @@ function myFunction() {
   const myNumber = 1;
   console.log(myGlobal);
 
-  function parent() { // function interna
+  function parent() {
+    // function interna
     const inner = 2;
     console.log(myNumber, myGlobal);
 

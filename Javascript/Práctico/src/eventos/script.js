@@ -5,7 +5,6 @@ const input2 = document.querySelector("#calculo2");
 const btn = document.querySelector("#btnCalcular");
 const pResult = document.querySelector("#result");
 
-
 form.addEventListener("submit", btnOnClick);
 
 function btnOnClick(event) {

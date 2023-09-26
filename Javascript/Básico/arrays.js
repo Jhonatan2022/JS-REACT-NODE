@@ -14,25 +14,18 @@ console.log(frutas[0]); // Los arrays iician en "0"
 var masFrutas = frutas.push("Uvas"); // Esté metodo añadirá "Uvas" añ final del array
 console.log(frutas);
 
-
 // .pop();
 var utlimo = frutas.pop("Uvas"); // Eliminará "Uvas" del final
 console.log(frutas);
-
 
 // unshift()
 var nuevaLogitud = frutas.unshift("Uvas"); // Añade "Uvas" al inicio
 console.log(frutas);
 
-
 // shift()
 var borrarFruta = frutas.shift("Manzana"); // Elimina "Manzana" del inico
 console.log(frutas);
 
-
 // .indexOf();
 var posicion = frutas.indexOf("Platano"); // te dará la posición de ese item en el array
 console.log(frutas);
-
-
-

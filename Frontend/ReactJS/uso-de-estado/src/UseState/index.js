@@ -11,47 +11,35 @@ function UseState({ name }) {
     confirm: false,
   });
 
-const onConfim = () => {
-    setState({ ...state, 
-      error: false, 
-      loading: false, 
+  const onConfim = () => {
+    setState({
+      ...state,
+      error: false,
+      loading: false,
       confirm: true,
       value: "",
     });
-};
+  };
 
-const onError = () => {
-  setState({ ...state, 
-    error: true, 
-    loading: false 
-  });
-};
+  const onError = () => {
+    setState({ ...state, error: true, loading: false });
+  };
 
-const onWrite = (newValue) => {
-  setState({ ...state, 
-    value: newValue, 
-  });
-}
+  const onWrite = (newValue) => {
+    setState({ ...state, value: newValue });
+  };
 
-const onCheck = () => {
-  setState({ ...state, 
-  loading: !state.loading,
-  error: false });
-}
+  const onCheck = () => {
+    setState({ ...state, loading: !state.loading, error: false });
+  };
 
-const onDelete = () => {
-  setState({ ...state, 
-  deleted: true 
-  });
-}
+  const onDelete = () => {
+    setState({ ...state, deleted: true });
+  };
 
-const onReset = () => {
-  setState({ ...state, 
-    confirm: false, 
-    deleted: false, 
-    value: "" 
-  });
-}
+  const onReset = () => {
+    setState({ ...state, confirm: false, deleted: false, value: "" });
+  };
 
   React.useEffect(() => {
     if (!!state.loading) {

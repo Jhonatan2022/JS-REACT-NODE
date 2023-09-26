@@ -1,9 +1,9 @@
-import React from 'react';
-import { useAuth } from '../Auth/auth';
+import React from "react";
+import { useAuth } from "../Auth/auth";
 
 function Profile() {
   const auth = useAuth();
-  
+
   return (
     <>
       <h1>Perfil</h1>
