@@ -12,9 +12,10 @@ function saludar() {
   }
 }
 
-
 for (persona of nombrePersonas) {
-  persona.admin === true ? console.log(`Bienvenido administrador ${persona.nombre}`) : console.log(`Hola ${persona.nombre}`);
+  persona.admin === true
+    ? console.log(`Bienvenido administrador ${persona.nombre}`)
+    : console.log(`Hola ${persona.nombre}`);
 }
 
 saludar();

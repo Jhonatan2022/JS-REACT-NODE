@@ -1,8 +1,10 @@
-const X_API_KEY = "live_4A56aqKIbwdoK3QmYYS9QdCGZqrPEzKmCwC9C3SQ0zvFJY52CrLIdaGO3rcRdpC2";
+const X_API_KEY =
+  "live_4A56aqKIbwdoK3QmYYS9QdCGZqrPEzKmCwC9C3SQ0zvFJY52CrLIdaGO3rcRdpC2";
 
 const API_URL_RANDOM = "https://api.thecatapi.com/v1/images/search?limit=2";
 const API_URL_FAVOTITES = `https://api.thecatapi.com/v1/favourites`;
-const API_URL_FAVOTITES_DELETE = (id) => `https://api.thecatapi.com/v1/favourites/${id}`;
+const API_URL_FAVOTITES_DELETE = (id) =>
+  `https://api.thecatapi.com/v1/favourites/${id}`;
 const URL_IMAGE_UPLOAD = `https://api.thecatapi.com/v1/images/upload`;
 
 const spanError = document.getElementById("error");

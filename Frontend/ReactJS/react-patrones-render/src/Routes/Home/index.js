@@ -1,22 +1,22 @@
-import React from 'react';
-import { useNavigate, useSearchParams } from 'react-router-dom';
-import { useTodos } from '../useTodos';
-import { TodoHeader } from '../../ui/TodoHeader';
-import { TodoCounter } from '../../ui/TodoCounter';
-import { TodoSearch } from '../../ui/TodoSearch';
-import { TodoList } from '../../ui/TodoList';
-import { TodoItem } from '../../ui/TodoItem';
-import { TodosError } from '../../ui/TodosError';
-import { TodosLoading } from '../../ui/TodosLoading';
-import { EmptyTodos } from '../../ui/EmptyTodos';
-import { CreateTodoButton } from '../../ui/CreateTodoButton';
-import { Modal } from '../../ui/Modal';
-import { ChangeAlert } from '../../ui/ChangeAlert';
+import React from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
+import { useTodos } from "../useTodos";
+import { TodoHeader } from "../../ui/TodoHeader";
+import { TodoCounter } from "../../ui/TodoCounter";
+import { TodoSearch } from "../../ui/TodoSearch";
+import { TodoList } from "../../ui/TodoList";
+import { TodoItem } from "../../ui/TodoItem";
+import { TodosError } from "../../ui/TodosError";
+import { TodosLoading } from "../../ui/TodosLoading";
+import { EmptyTodos } from "../../ui/EmptyTodos";
+import { CreateTodoButton } from "../../ui/CreateTodoButton";
+import { Modal } from "../../ui/Modal";
+import { ChangeAlert } from "../../ui/ChangeAlert";
 
 function HomePage() {
   const [params, setParams] = useSearchParams();
   const navigate = useNavigate();
-  const { state, stateUpdaters, } = useTodos();
+  const { state, stateUpdaters } = useTodos();
 
   // Destructuring state
   const {
@@ -38,14 +38,10 @@ function HomePage() {
     sincronizeTodos,
   } = stateUpdaters;
 
-
   return (
     <React.Fragment>
       <TodoHeader loading={loading}>
-        <TodoCounter
-          totalTodos={totalTodos}
-          completedTodos={completedTodos}
-        />
+        <TodoCounter totalTodos={totalTodos} completedTodos={completedTodos} />
         <TodoSearch
           searchValue={searchValue}
           setSearchValue={setSearchValue}
@@ -63,19 +59,19 @@ function HomePage() {
         onError={() => <TodosError />}
         onLoading={() => <TodosLoading />}
         onEmptyTodos={() => <EmptyTodos />}
-        onEmptySearchResults={
-          (searchText) => <p>No hay resultados para {searchText}</p>
-        }
+        onEmptySearchResults={(searchText) => (
+          <p>No hay resultados para {searchText}</p>
+        )}
       >
-        {todo => (
+        {(todo) => (
           <TodoItem
             key={todo.id}
             text={todo.text}
             completed={todo.completed}
             onEdit={() => {
               navigate(`/edit/${todo.id}`, {
-                state: { todo }
-              })
+                state: { todo },
+              });
             }}
             onComplete={() => completeTodo(todo.id)}
             onDelete={() => deleteTodo(todo.id)}
@@ -83,23 +79,12 @@ function HomePage() {
         )}
       </TodoList>
 
-      {/* {!!openModal && (
-        <Modal>
-          <TodoForm
-            addTodo={addTodo}
-            setOpenModal={setOpenModal}
-          />
-        </Modal>
-      )} */}
-
       <CreateTodoButton
-      onClick={() => navigate('/new')}
+        onClick={() => navigate("/new")}
         // setOpenModal={setOpenModal}
       />
 
-      <ChangeAlert
-        sincronize={sincronizeTodos}
-      />
+      <ChangeAlert sincronize={sincronizeTodos} />
     </React.Fragment>
   );
 }
