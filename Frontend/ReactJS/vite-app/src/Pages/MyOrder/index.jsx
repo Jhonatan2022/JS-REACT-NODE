@@ -6,14 +6,14 @@ import { OrderCard } from "../../Components/OrderCard";
 import { ShoppingCardContext } from "../../Context";
 
 function MyOrder() {
-    const context = useContext(ShoppingCardContext);
-    const currentPath = window.location.pathname;
-    let orderId = currentPath.substring(currentPath.lastIndexOf('/') + 1);
-    if (orderId === 'last') {
-        orderId = context.order.length - 1;
-    }
+  const context = useContext(ShoppingCardContext);
+  const currentPath = window.location.pathname;
+  let orderId = currentPath.substring(currentPath.lastIndexOf("/") + 1);
+  if (orderId === "last") {
+    orderId = context.order.length - 1;
+  }
 
-    return (
+  return (
     <Layout>
       <div className="flex items-center justify-center relative w-80 mb-6">
         <Link to="/my-orders" className="absolute left-0">

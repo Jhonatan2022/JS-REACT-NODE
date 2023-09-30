@@ -23,9 +23,9 @@ window.addEventListener("scroll", infiniteScroll, false);
 function navigator() {
   console.log({ location });
 
-  if (infiniteScroll){
-    window.removeEventListener("scroll", infiniteScroll, {pasive: false,});
-    infiniteScroll = undefined
+  if (infiniteScroll) {
+    window.removeEventListener("scroll", infiniteScroll, { pasive: false });
+    infiniteScroll = undefined;
   }
 
   if (location.hash.startsWith("#trends")) {
@@ -40,8 +40,8 @@ function navigator() {
     homePage();
   }
 
-  if(infiniteScroll){
-    window.addEventListener("scroll", infiniteScroll, {pasive: false,});
+  if (infiniteScroll) {
+    window.addEventListener("scroll", infiniteScroll, { pasive: false });
   }
 
   document.body.scrollTop = 0;
@@ -131,7 +131,7 @@ function searchPage() {
   searchForm.classList.remove("inactive");
 
   trendingPreviewSection.classList.add("inactive");
-  likedMoviesSection.classList.add("inactive"); 
+  likedMoviesSection.classList.add("inactive");
   categoriesPreviewSection.classList.add("inactive");
   genericSection.classList.remove("inactive");
   movieDetailSection.classList.add("inactive");

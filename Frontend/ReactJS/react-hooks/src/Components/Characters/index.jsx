@@ -1,10 +1,4 @@
-import {
-  useState,
-  useReducer,
-  useMemo,
-  useRef,
-  useCallback,
-} from "react";
+import { useState, useReducer, useMemo, useRef, useCallback } from "react";
 import { Search } from "../Search";
 import { useCharacters } from "../../hooks/useCharacters";
 
@@ -48,19 +42,9 @@ function Characters() {
     dispatch({ type: "REMOVE_FROM_FAVORITE", payload: favorite });
   };
 
-  // const handleSearch = () => {
-  //   setSearch(searchInput.current.value);
-  //   // setSearch(target.value);
-  // };
-
   const handleSearch = useCallback(() => {
     setSearch(searchInput.current.value);
   }, []);
-  //
-  // const filteredCharacters = characters.filter((character) => {
-  //   return character.name.toLowerCase().includes(search.toLowerCase());
-  // });
-
   const filteredCharacters = useMemo(
     () =>
       characters.filter((character) => {

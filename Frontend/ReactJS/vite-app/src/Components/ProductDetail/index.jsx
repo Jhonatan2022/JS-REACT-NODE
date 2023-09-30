@@ -5,7 +5,7 @@ import "./styles.css";
 
 function ProductDetail() {
   const context = useContext(ShoppingCardContext);
-  const { images=[], title, description, price } = context.productToShow;
+  const { images = [], title, description, price } = context.productToShow;
 
   return (
     <aside

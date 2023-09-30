@@ -1,12 +1,11 @@
-import { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
 const LazyLoader = ({ src, alt }) => {
-
   LazyLoader.propTypes = {
     src: PropTypes.string.isRequired,
     alt: PropTypes.string.isRequired,
-  }
+  };
 
   const [imageSrc, setImageSrc] = useState(null);
 

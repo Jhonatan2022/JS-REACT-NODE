@@ -1,14 +1,13 @@
 // https://api.escuelajs.co/api/v1/products
 
 function hello(name, age) {
-    return `Hello ${name}, you are ${age} years old`;
+  return `Hello ${name}, you are ${age} years old`;
 }
 
 function obtainData(name, age, callback) {
-    return callback(name, age);
+  return callback(name, age);
 }
 
-console.log(obtainData('Jorge', 35, hello));
+console.log(obtainData("Jorge", 35, hello));
 
-
-setTimeout(hello, 2000, 'Jorge');
+setTimeout(hello, 2000, "Jorge");

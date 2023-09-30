@@ -1,5 +1,5 @@
-import React from 'react';
-import './TodosLoading.css';
+import React from "react";
+import "./TodosLoading.css";
 
 function TodosLoading() {
   return (
