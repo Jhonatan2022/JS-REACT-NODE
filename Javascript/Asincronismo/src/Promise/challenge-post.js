@@ -1,29 +1,27 @@
-import fetch from 'node-fetch';
-const API = 'https://api.escuelajs.co/api/v1';
+import fetch from "node-fetch";
+const API = "https://api.escuelajs.co/api/v1";
 
 function postData(urlApi, data) {
   const response = fetch(urlApi, {
-    method: 'POST',
-    mode: 'cors',
-    credentials: 'same-origin',
+    method: "POST",
+    mode: "cors",
+    credentials: "same-origin",
     headers: {
-      'Content-Type': 'application/json'
+      "Content-Type": "application/json",
     },
-    body: JSON.stringify(data)
+    body: JSON.stringify(data),
   });
   return response;
 }
 
 const data = {
-  "title": "Push api",
-  "price": 45677,
-  "description": "A description",
-  "categoryId": 44,
-  "images": [
-    "https://placeimg.com/640/480/any"
-  ]
-}
+  title: "Push api",
+  price: 45677,
+  description: "A description",
+  categoryId: 44,
+  images: ["https://placeimg.com/640/480/any"],
+};
 
 postData(`${API}/products`, data)
-  .then(response => response.json())
-  .then(data => console.log(data));
+  .then((response) => response.json())
+  .then((data) => console.log(data));

@@ -207,3 +207,23 @@ npm outdate # Muestra los paquetes que se pueden actualizar
 # Desinstala el paquete
 npm uninstall name_package
 ```
+
+## Webs de utilidad
+
+- [Repositorio de ECMAScript](https://github.com/tc39/proposals)
+- [Tinypng](https://tinypng.com/) - Compresor de imagenes
+- [Verexif](https://www.verexif.com/) - Eliminar metadata de imagenes (Para celular)
+- [Google Fonts](https://fonts.google.com/) - Fuentes de Google
+- [Tamaños de pantalla](https://www.mydevice.io/#compare-devices)- [Caniuse](https://caniuse.com/) - Compatibilidad de CSS y JS
+- [Abobe Color](https://color.adobe.com/es/create/color-wheel) - Paleta de colores
+- [Flaticon](https://www.flaticon.es/)
+- [Firefly](https://firefly.adobe.com/) - Imagenes
+- [Repo Posicionamientos](https://github.com/platzi/CSS2020#8-t%C3%A9cnicas-de-alineamiento-antes-de-css-grid-parte-2) - Guía clase
+- [Gradient Generator](https://mycolor.space/gradient) - Generador de gradientes
+- [Examples Grid](https://gridbyexample.com/patterns/) - Ejemplos de Grid
+- [CSS reference](https://cssreference.io/) - Referencia de CSS
+- [Tailwind Components](https://tailwindcomponents.com/cheatsheet/) - Componentes de Tailwind
+- [React Svg](https://reactsvgicons.com/) - Iconos de React
+- [UseHooks](https://usehooks.com/) - Hooks
+- [React Helmet](https://www.npmjs.com/package/react-helmet) - SEO
+- [Unavatar](https://unavatar.io/#/) - Avatars de redes sociales

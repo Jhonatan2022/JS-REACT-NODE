@@ -5,7 +5,7 @@ import { Layout } from "../../Components/Layout";
 import { OrdersCard } from "../../Components/OrdersCard";
 
 function MyOrders() {
-    const context = useContext(ShoppingCardContext);
+  const context = useContext(ShoppingCardContext);
 
   return (
     <Layout>

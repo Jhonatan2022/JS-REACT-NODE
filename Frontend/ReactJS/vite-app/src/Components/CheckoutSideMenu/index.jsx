@@ -10,9 +10,11 @@ function CheckoutSideMenu() {
   const context = useContext(ShoppingCardContext);
 
   const handleDelete = (id) => {
-    const filteredProducts = context.cardProducts.filter(product => product.id != id)
-    context.setCardProducts(filteredProducts)
-  }
+    const filteredProducts = context.cardProducts.filter(
+      (product) => product.id != id
+    );
+    context.setCardProducts(filteredProducts);
+  };
 
   const handleCheckout = () => {
     const oderToAdd = {
@@ -44,7 +46,7 @@ function CheckoutSideMenu() {
         </div>
       </div>
       <div className="px-6 overflow-y-scroll flex-1">
-        {context.cardProducts.map(product => (
+        {context.cardProducts.map((product) => (
           <OrderCard
             key={product.id}
             id={product.id}
@@ -62,8 +64,13 @@ function CheckoutSideMenu() {
             ${totalPrice(context.cardProducts)}
           </span>
         </p>
-        <Link to='/my-orders/last'>
-          <button className='bg-black py-3 text-white w-full rounded-lg mb-6' onClick={() => handleCheckout()}>Checkout</button>
+        <Link to="/my-orders/last">
+          <button
+            className="bg-black py-3 text-white w-full rounded-lg mb-6"
+            onClick={() => handleCheckout()}
+          >
+            Checkout
+          </button>
         </Link>
       </div>
     </aside>

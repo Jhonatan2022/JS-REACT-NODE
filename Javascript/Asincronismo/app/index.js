@@ -21,7 +21,9 @@ async function getData(url) {
   try {
     const videos = await getData(API);
     let view = `
-    ${videos.items.map((video) => `
+    ${videos.items
+      .map(
+        (video) => `
       <div class="group relative">
         <div
           class="w-full bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:aspect-none">
@@ -34,10 +36,13 @@ async function getData(url) {
           </h3>
         </div>
       </div>
-    `).slice(0, 4).join("")}`;
+    `
+      )
+      .slice(0, 4)
+      .join("")}`;
 
     content.innerHTML = view;
   } catch (error) {
     console.log(error);
   }
-})();   
+})();

@@ -1,8 +1,13 @@
-import React, { useEffect } from 'react';
-import './TodoSearch.css';
+import React, { useEffect } from "react";
+import "./TodoSearch.css";
 
-function TodoSearch({ searchValue, setSearchValue, loading , params, setParams}) {
-
+function TodoSearch({
+  searchValue,
+  setSearchValue,
+  loading,
+  params,
+  setParams,
+}) {
   const onSearchValueChange = (event) => {
     console.log(event.target.value);
     setSearchValue(event.target.value);

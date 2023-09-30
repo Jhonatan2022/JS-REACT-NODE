@@ -21,19 +21,28 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
 
-            <Route path="/blog" element={<BlogPage />} >
+            <Route path="/blog" element={<BlogPage />}>
               <Route path=":slug" element={<BlogPost />} />
             </Route>
 
             <Route path="/login" element={<Login />} />
-            <Route 
-              path="/logout" 
-              element={<AuthRoute>
-                <Logout />
-              </AuthRoute>} />
+            <Route
+              path="/logout"
+              element={
+                <AuthRoute>
+                  <Logout />
+                </AuthRoute>
+              }
+            />
 
-            <Route path="/profile" element={
-              <AuthRoute><Profile /></AuthRoute>} />
+            <Route
+              path="/profile"
+              element={
+                <AuthRoute>
+                  <Profile />
+                </AuthRoute>
+              }
+            />
 
             {/* En caso de que no exista la ruta Imprimimos el mensaje */}
             <Route path="*" element={<h1>Not Found</h1>} />
